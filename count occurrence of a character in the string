@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    char s[100]; // Assuming a maximum string length of 100
+    char c;
+    int count = 0;
+
+    printf("Enter a sentence: ");
+    scanf(" %[^\n]", s); // Read the entire sentence (including spaces)
+
+    printf("Enter the character to count: ");
+    scanf(" %c", &c); // Note the space before %c to consume any newline characters
+
+    for (int i = 0; s[i] != '\0'; ++i) {
+        if (s[i] == c) {
+            ++count;
+        }
+    }
+
+    printf("Occurrences of '%c' in the sentence: %d\n", c, count);
+
+    return 0;
+}
